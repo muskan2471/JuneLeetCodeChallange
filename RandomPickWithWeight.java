@@ -27,6 +27,30 @@ The input is two lists: the subroutines called and their arguments. Solution's c
 has one argument, the array w. pickIndex has no arguments. Arguments are always wrapped with
 a list, even if there aren't any.
  */
+
+/*			SOLUTION
+The problem is, we need to randomly pick an index proportional to its weight.
+What this means? 
+We have weights array, each
+weights[i]  represents weight of index i. 
+The more the weight is, then high chances of getting that index randomly.
+
+suppose weights = [1, 3]
+then 3 is larger, so there are high chances to get index 1.
+
+We can know the chances of selecting each index by knowing their probability.
+
+P(i) = weight[i]/totalWeight
+
+totalWeight = 1 + 3 = 4
+So, for index 0, P(0) = 1/4  = 0.25 = 25%
+for index 1, P(1) = 3/4 = 0.75 = 75%
+
+So, there are 25% of chances to pick index 0 and 75% chances to pick index 1.
+
+I have provided java code for this problem in the comment section. 
+If you are interested, you can check that. Happy coding.
+*/
 import java.util.*;
 public class RandomPickWithWeight 
 {
